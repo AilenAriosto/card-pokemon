@@ -1,0 +1,119 @@
+.flex {
+  display: flex;
+  align-items: center; }
+
+body {
+  margin: 0;
+  font-family: "Muli", sans-serif;
+  background-color: #153E90;
+  color: #FFFAA4;
+  text-align: center; }
+
+* {
+  box-sizing: border-box; }
+
+html,
+body {
+  position: relative;
+  height: 100%; }
+
+::-webkit-scrollbar {
+  display: none; }
+
+.header {
+  width: 100%;
+  height: 60px; }
+
+.header__img {
+  object-fit: cover;
+  height: 100%; }
+
+/* Main */
+.main {
+  text-align: center; }
+
+.main__title {
+  color: #153E90;
+  font-size: 25px; }
+
+.input {
+  border: 2px solid #153E90;
+  border-radius: 25px;
+  padding: 0 20px;
+  width: 70%;
+  color: #153E90;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.1);
+  height: 50px;
+  outline: none; }
+
+::placeholder {
+  color: #153E90; }
+
+.swiper {
+  width: 80%;
+  overflow: initial; }
+
+.swiper-button-next, .swiper-button-prev {
+  top: 0;
+  margin: 0 -6%;
+  height: 94%;
+  width: 50px;
+  color: #54E346; }
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+  background-color: #FFFAA4;
+  color: #54E346; }
+
+.swiper-pagination-bullet-active {
+  background-color: #54E346; }
+
+.swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: #0E49B5;
+  width: 200px;
+  height: 250px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: 450ms all;
+  transform-origin: center left;
+  position: relative; }
+
+.swiper-slide:hover {
+  opacity: 0.5; }
+
+.swiper-slide:hover ~ .swiper-slide {
+  transform: translate3d(100px, 0, 0); }
+
+.swiper-wrapper:hover .swiper-slide {
+  opacity: 0.3; }
+
+.swiper-wrapper:hover .swiper-slide:hover {
+  transform: scale(1.2);
+  opacity: 1; }
+
+.swiper-slide img {
+  display: block;
+  height: 60%; }
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  position: initial; }

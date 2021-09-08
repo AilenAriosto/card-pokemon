@@ -1,0 +1,21 @@
+$color-primary : #153E90;
+$color-secondary: #0E49B5;
+$color-third: #54E346;
+$color-fourth: #FFFAA4;
+
+$font-family_primary: 'Muli', sans-serif;
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+@mixin ul{
+    display: none;
+    list-style: none;
+    margin: 0px 0px 0px -14px;
+    padding: 0px;
+    position: absolute;
+    width: 100px;
+    text-align: right;
+}

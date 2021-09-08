@@ -1,0 +1,81 @@
+.swiper {
+  width: 80%;
+  overflow: initial;
+}
+
+.swiper-button-next, .swiper-button-prev{
+  top: 0;
+  margin: 0 -6%;
+  height: 94%;
+  width: 50px;
+  color: $color-third;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover{
+  background-color: $color-fourth;
+  color: $color-third;
+}
+
+.swiper-pagination-bullet-active{
+  background-color: $color-third;
+}
+
+
+.swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: $color-secondary;
+  width: 200px;
+  height: 250px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: 450ms all;
+  transform-origin: center left;
+  position: relative;
+
+}
+
+.swiper-slide:hover{
+  opacity: 0.5;
+}
+
+.swiper-slide:hover ~ .swiper-slide{
+  transform: translate3d(100px,0,0);
+}
+
+.swiper-wrapper:hover .swiper-slide{
+  opacity: 0.3;
+}
+
+.swiper-wrapper:hover .swiper-slide:hover{
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.swiper-slide img {
+  display: block;
+  height: 60%;
+}
+
+
+.swiper-horizontal>.swiper-pagination-bullets, 
+.swiper-pagination-bullets.swiper-pagination-horizontal, 
+.swiper-pagination-custom, 
+.swiper-pagination-fraction{
+  position: initial;
+}

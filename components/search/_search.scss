@@ -1,0 +1,31 @@
+
+
+/* Main */
+
+.main{
+    text-align: center;
+}
+
+.main__title{
+    color: $color-primary;
+    font-size: 25px;
+}
+
+.input{
+    border: 2px solid $color-primary;
+    border-radius: 25px;
+    padding: 0 20px;
+    width: 70%;
+    color: $color-primary;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.1);
+    height: 50px;
+    outline: none;
+}
+
+::placeholder{
+    color: $color-primary;
+}
+
+
+
