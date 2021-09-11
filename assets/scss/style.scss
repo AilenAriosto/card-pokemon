@@ -1,11 +1,12 @@
 @import '_variables';
 
 body {
-    margin: 0;
+    margin: 20px;
     font-family: $font-family_primary;
     background-color: $color-primary;
     color: $color-fourth;
     text-align: center;
+
 }
   
 * {
@@ -20,8 +21,5 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
-
-@import '../../components/header/_header.scss';
-@import '../../components/search/_search.scss';
 @import '../../components/carousel/_carousel.scss';
 
