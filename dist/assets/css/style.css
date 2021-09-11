@@ -1,7 +1,3 @@
-.flex {
-  display: flex;
-  align-items: center; }
-
 body {
   margin: 20px;
   font-family: "Muli", sans-serif;
@@ -11,11 +7,6 @@ body {
 
 * {
   box-sizing: border-box; }
-
-html,
-body {
-  position: relative;
-  height: 100%; }
 
 ::-webkit-scrollbar {
   display: none; }
@@ -30,21 +21,10 @@ body {
   align-items: center; }
 
 .swiper-slide {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
   align-items: center;
   flex-direction: column;
-  width: 100%;
-  height: 100%;
   background-color: #0E49B5;
   width: 200px;
   height: 250px;
