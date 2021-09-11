@@ -2,7 +2,7 @@ let swiper = document.getElementById('swiper')
 
 
 const fetchPokemons = async () => {
-    for (let i = 1; i <= 800; i++) {
+    for (let i = 1; i <= 649; i++) {
         await getPokemon(i)
     }
 }
