@@ -56,3 +56,22 @@
 .hide{
   display: none;
 }
+
+//Responsive
+
+
+
+@media (max-width: 767px){
+  .swiper{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1025px){
+  .swiper{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+
+
