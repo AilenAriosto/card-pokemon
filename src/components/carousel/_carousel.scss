@@ -1,0 +1,85 @@
+.swiper {
+  margin: 50px 20px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  grid-gap: 20px;
+  gap: 20px;
+  align-items: center;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: $color-secondary;
+  width: 200px;
+  height: 250px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: 450ms all;
+  transform-origin: center left;
+
+}
+
+.swiper-slide:hover{
+  opacity: 0.5;
+}
+
+.swiper-wrapper:hover .swiper-slide{
+  opacity: 0.3;
+}
+
+.swiper-wrapper:hover .swiper-slide:hover{
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.swiper-slide img {
+  height: 60%;
+}
+
+.card-body-parraf{
+  text-align: center;
+  color: $color-fourth;
+  margin: 10px;
+  display: none;
+}
+
+.show{
+  display: block;
+}
+
+.hide{
+  display: none;
+}
+
+//Responsive
+
+
+
+@media (max-width: 440px){
+  .swiper{
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 439px) and (max-width: 650px){
+  .swiper{
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 651px) and (max-width: 1025px){
+  .swiper{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+
+
