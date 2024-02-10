@@ -1,13 +1,42 @@
-<!DOCTYPE html>
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Pokedex - Vanilla JS
-        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Muli&display=swap")
-        link(rel="stylesheet", href="assets/css/style.css")
-    body
-        include components/carousel/carousel.pug
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title MOKEPON!
 
-        script(src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer")
-        script(src="assets/js/script.js")
+		link(rel="stylesheet", href="assets/css/style.css")
+	body
+		section#seleccionar-mascota
+			h1.titulo Mokepon
+			h2.subtitulo Elige tu mascota:
+			.tarjetas#contenedorTarjetas
+			button#boton-mascota Seleccionar
+
+		section#ver-mapa 
+			h1.titulo Recorre el mapa con tu mokepon
+			canvas#mapa
+			button(onmouseup="detenerMovimiento()" onmousedown="moverArriba()") Arriba 
+			button(onmouseup="detenerMovimiento()" onmousedown="moverIzquierda()") Izquierda
+			button(onmouseup="detenerMovimiento()" onmousedown="moverAbajo()") Abajo
+			button(onmouseup="detenerMovimiento()" onmousedown="moverDerecha()") Derecha
+
+
+		section#seleccionar-ataque
+			h1.titulo Mokepon
+			h2.subtitulo Elige tu ataque:
+			.tarjetas-ataques#contenedorAtaques
+			#mensajes
+				p#resultado Mucha suerte
+				section#reiniciar
+					button#boton-reiniciar Reiniciar
+			.ataques
+				.ataques-jugador
+					p#vidas-jugador 0
+					p#mascota-jugador
+					#ataques-del-jugador
+				.ataques-enemigo
+					p#vidas-enemigo 0
+					p#mascota-enemigo
+					#ataques-del-enemigo
+
+		script(src="assets/js/scripts.js")

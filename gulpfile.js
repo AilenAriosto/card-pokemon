@@ -1,25 +1,38 @@
-const gulp = require('gulp');
-var sass = require('gulp-sass');
-var pug = require('gulp-pug');
+var gulp = require('gulp')
+const { watch, series } = require('gulp');
+const pug = require('gulp-pug')
+const sass = require('gulp-sass')(require('sass'));
+var browserSync = require('browser-sync').create();
+var reload = browserSync.reload; 
 
-gulp.task('sass', () => {
 
-    return gulp.src('src/scss/*.scss')
+function convertcss(){
+    return gulp.src('./src/assets/scss/*.scss')
         .pipe(sass())
-        .pipe(gulp.dest('dist/assets/css'));
-        
-});
+        .pipe(gulp.dest('./dist/assets/css/'))
+}
+
+exports.convertcss = convertcss
 
 
-gulp.task('pug', () => {
-
-    return gulp.src('src/**/*.pug')
+function convertPug() {
+    return gulp.src('./src/*.pug')
         .pipe(pug({
-            pretty: true
-        }))
-        .pipe(gulp.dest('dist/'))
-                
-});
+                pretty: true,
+                doctype: 'html'
+            }))
+        .pipe(gulp.dest('./dist/'))
+};
 
+exports.convertPug = convertPug
 
+function moveJs(){
+    return gulp.src('./src/assets/js/*.js')
+        .pipe(gulp.dest('./dist/assets/js/'))
+}
 
+exports.moveJs = moveJs
+
+exports.default = function() {
+    watch(["./src/*.pug","./src/assets/scss/*.scss", "./src/**/*.js"], series(convertcss,convertPug, moveJs )).on("change", reload);
+};
