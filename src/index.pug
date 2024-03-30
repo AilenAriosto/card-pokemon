@@ -2,41 +2,49 @@ doctype html
 html
 	head
 		meta(charset="utf-8")
-		title MOKEPON!
-
+		title Jurassic Attack!
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		link(rel="stylesheet", href="assets/css/style.css")
 	body
-		section#seleccionar-mascota
-			h1.titulo Mokepon
-			h2.subtitulo Elige tu mascota:
-			.tarjetas#contenedorTarjetas
-			button#boton-mascota Seleccionar
+		main  
+			section.initGame#init-game
+				.initGame__opacity
+				.initGame__textContainer
+					h1 Jurassic Attack 
+					.linkButton
+						img(src="./assets/img/icon_link.svg", alt="")
+						button(onclick="initGame()") Iniciar partida 
+				
+			section.selectDinosaurs#select-dinosaurs
+				.selectDinosaurs__dinosaurs#dinosaurs-selected
+				.selectDinosaurs__tarjetas#dinosaursList
+					
 
-		section#ver-mapa 
-			h1.titulo Recorre el mapa con tu mokepon
-			canvas#mapa
-			button(onmouseup="detenerMovimiento()" onmousedown="moverArriba()") Arriba 
-			button(onmouseup="detenerMovimiento()" onmousedown="moverIzquierda()") Izquierda
-			button(onmouseup="detenerMovimiento()" onmousedown="moverAbajo()") Abajo
-			button(onmouseup="detenerMovimiento()" onmousedown="moverDerecha()") Derecha
+		//- section#ver-mapa 
+		//- 	h1.titulo Recorre el mapa con tu mokepon
+		//- 	canvas#mapa
+		//- 	button(onmouseup="detenerMovimiento()" onmousedown="moverArriba()") Arriba 
+		//- 	button(onmouseup="detenerMovimiento()" onmousedown="moverIzquierda()") Izquierda
+		//- 	button(onmouseup="detenerMovimiento()" onmousedown="moverAbajo()") Abajo
+		//- 	button(onmouseup="detenerMovimiento()" onmousedown="moverDerecha()") Derecha
 
 
-		section#seleccionar-ataque
-			h1.titulo Mokepon
-			h2.subtitulo Elige tu ataque:
-			.tarjetas-ataques#contenedorAtaques
-			#mensajes
-				p#resultado Mucha suerte
-				section#reiniciar
-					button#boton-reiniciar Reiniciar
-			.ataques
-				.ataques-jugador
-					p#vidas-jugador 0
-					p#mascota-jugador
-					#ataques-del-jugador
-				.ataques-enemigo
-					p#vidas-enemigo 0
-					p#mascota-enemigo
-					#ataques-del-enemigo
+		//- section#seleccionar-ataque
+		//- 	h1.titulo Mokepon
+		//- 	h2.subtitulo Elige tu ataque:
+		//- 	.tarjetas-ataques#contenedorAtaques
+		//- 	#mensajes
+		//- 		p#resultado Mucha suerte
+		//- 		section#reiniciar
+		//- 			button#boton-reiniciar Reiniciar
+		//- 	.ataques
+		//- 		.ataques-jugador
+		//- 			p#vidas-jugador 0
+		//- 			p#mascota-jugador
+		//- 			#ataques-del-jugador
+		//- 		.ataques-enemigo
+		//- 			p#vidas-enemigo 0
+		//- 			p#mascota-enemigo
+		//- 			#ataques-del-enemigo
 
 		script(src="assets/js/scripts.js")

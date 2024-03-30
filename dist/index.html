@@ -2,47 +2,26 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>MOKEPON!</title>
+    <title>Jurassic Attack!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
-    <section id="seleccionar-mascota">
-      <h1 class="titulo">Mokepon</h1>
-      <h2 class="subtitulo">Elige tu mascota:</h2>
-      <div class="tarjetas" id="contenedorTarjetas"></div>
-      <button id="boton-mascota">Seleccionar</button>
-    </section>
-    <section id="ver-mapa"> 
-      <h1 class="titulo">Recorre el mapa con tu mokepon</h1>
-      <canvas id="mapa"></canvas>
-      <button onmouseup="detenerMovimiento()" onmousedown="moverArriba()">Arriba </button>
-      <button onmouseup="detenerMovimiento()" onmousedown="moverIzquierda()">Izquierda</button>
-      <button onmouseup="detenerMovimiento()" onmousedown="moverAbajo()">Abajo</button>
-      <button onmouseup="detenerMovimiento()" onmousedown="moverDerecha()">Derecha</button>
-    </section>
-    <section id="seleccionar-ataque">
-      <h1 class="titulo">Mokepon</h1>
-      <h2 class="subtitulo">Elige tu ataque:</h2>
-      <div class="tarjetas-ataques" id="contenedorAtaques"></div>
-      <div id="mensajes">
-        <p id="resultado">Mucha suerte</p>
-        <section id="reiniciar">
-          <button id="boton-reiniciar">Reiniciar</button>
-        </section>
-      </div>
-      <div class="ataques">
-        <div class="ataques-jugador">
-          <p id="vidas-jugador">0</p>
-          <p id="mascota-jugador"></p>
-          <div id="ataques-del-jugador"></div>
+    <main> 
+      <section class="initGame" id="init-game">
+        <div class="initGame__opacity"></div>
+        <div class="initGame__textContainer">
+          <h1>Jurassic Attack </h1>
+          <div class="linkButton"><img src="./assets/img/icon_link.svg" alt="">
+            <button onclick="initGame()">Iniciar partida </button>
+          </div>
         </div>
-        <div class="ataques-enemigo">
-          <p id="vidas-enemigo">0</p>
-          <p id="mascota-enemigo"></p>
-          <div id="ataques-del-enemigo"></div>
-        </div>
-      </div>
-    </section>
+      </section>
+      <section class="selectDinosaurs" id="select-dinosaurs">
+        <div class="selectDinosaurs__dinosaurs" id="dinosaurs-selected"></div>
+        <div class="selectDinosaurs__tarjetas" id="dinosaursList"></div>
+      </section>
+    </main>
     <script src="assets/js/scripts.js"></script>
   </body>
 </html>
